@@ -1,7 +1,10 @@
+import 'package:bloc_exp_378/Lbloc/list_bloc.dart';
 import 'package:bloc_exp_378/bloc/counter_bloc.dart';
 import 'package:bloc_exp_378/bloc/counter_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'list_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,8 +22,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: BlocProvider(
-        create: (context) => CounterBloc(),
-        child: MyHomePage(),
+        create: (context) => ListBloc(),
+        child: ListPage(),
       ),
     );
   }
